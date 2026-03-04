@@ -1,0 +1,141 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+:root {
+  --po: white;
+  --bg-url: url(vector-abstract-black-and-grey-wave-business-background-vector-image-.jpg);
+  --cor: rgba(255, 255, 255, 0.5);
+  --cor-de-fundo: rgba(255, 255, 255, 0.1);
+  --cordefundo-hover: rgba(255, 255, 255, 0.3);
+  --lua-e-mel-sol-bg-url: url(moon-stars.svg);
+}
+.light {
+  --po: black;
+  --bg-url: url(fundo-ondulado-preto-e-branco_23-2150530925.jpg);
+  --cor: rgba(0, 0, 0);
+  --cor-de-fundo: rgba(0, 0, 0, 0.05);
+  --cordefundo-hover: rgba(0, 0, 0, 0.2);
+  --lua-e-mel-sol-bg-url: url(sun.svg);
+}
+
+body {
+  background: var(--bg-url) no-repeat top center/cover;
+}
+body * {
+  font-family: "Inter", sans-serif;
+  color: var(--po);
+}
+#container {
+  width: 100%;
+  max-width: 588px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+#mnysticks-id img {
+  width: 240px;
+  display: block;
+  margin: 0px auto 5px;
+}
+#mnysticks-id p {
+  text-align: center;
+  font-size: 150%;
+  font-weight: 500;
+}
+#switch {
+  position: relative;
+  width: 70px;
+  margin: 4px auto;
+}
+#switch button {
+  width: 32px;
+  height: 32px;
+  background: rgb(231, 231, 231) var(--lua-e-mel-sol-bg-url) no-repeat center;
+  border: 0;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+  right: 38px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.light #switch button {
+  right: -1px;
+  left: initial;
+}
+
+#switch span {
+  display: block;
+  width: 70px;
+  height: 24px;
+  background: var(--cor-de-fundo);
+  backdrop-filter: blur(100px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid var(--cor);
+  border-radius: 9999px;
+}
+
+#mnysticks-id {
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#mnysticks-id ul {
+  margin: 15px auto;
+  list-style: none;
+  flex-direction: column;
+  gap: 15px;
+  display: flex;
+  border-left: 20px;
+  border-right: 20px;
+}
+#mnysticks-id ul li a[href="#"] {
+  margin: auto;
+  display: flex;
+  height: 40px;
+  align-items: center;
+  padding: 40px 87px;
+  background: var(--cor-de-fundo);
+  border: 1px solid var(--cor);
+  border-radius: 9px;
+  backdrop-filter: blur(100px);
+  text-decoration: none;
+  font-weight: 450;
+  transition: background 0.2s;
+  font-size: 105%;
+}
+#mnysticks-id ul li a:hover {
+  background: var(--cordefundo-hover);
+  border: 1.5px solid var(--po);
+  animation-iteration-count: infinite;
+}
+#Links-sociais {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  font-size: 30px;
+  padding: 10px;
+}
+#Links-sociais a {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#Links-sociais ion-icon[name] {
+  transition: background 0.2s;
+  padding: 10px;
+  border-radius: 50%;
+}
+#Links-sociais ion-icon[name]:hover {
+  background: var(--cordefundo-hover);
+  border-radius: 50%;
+}
+footer {
+  padding: 24px 0;
+  text-align: center;
+  font-size: 19px;
+}
