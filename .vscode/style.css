@@ -43,6 +43,10 @@ body * {
   font-size: 150%;
   font-weight: 500;
 }
+#mnysticks-id ul li a {
+  text-align: center;
+  display: block;
+}
 #switch {
   position: relative;
   width: 70px;
