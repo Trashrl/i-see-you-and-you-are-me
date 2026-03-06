@@ -47,6 +47,9 @@ body * {
 #mnysticks-id ul li a {
   border: 1px solid red;
 }
+#mnysticks-id ul li a iframe {
+  visibility: hidden;
+}
 #switch {
   position: relative;
   width: 70px;
@@ -61,14 +64,16 @@ body * {
   position: absolute;
   z-index: 1;
   right: 38px;
-  top: 50%;
+  top: 11px;
   transform: translateY(-50%);
+  animation: slide-back 0.4s;
 }
 .light #switch button {
-  right: -1px;
-  left: initial;
+  animation: slide-in 0.4s forwards;
 }
-
+#switch button:hover {
+  outline: 8px solid var(--cordefundo-hover);
+}
 #switch span {
   display: block;
   width: 70px;
@@ -153,4 +158,24 @@ footer {
   .light {
     --bg-url: url(fundo-ondulado-preto-e-branco_23-2150530925.jpg);
   }
+}
+
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 60%;
+  }
+}
+@keyframes slide-back {
+  from {
+    left: 60%;
+  }
+  to {
+    left: 0;
+  }
+}
+#zoio {
+  border: 1px solid red;
 }

@@ -10,3 +10,7 @@ function toggleMode() {
     img.setAttribute("src", "Avatar.png")
   }
 }
+function playSom() {
+  var som = document.getElementById("risada-do-zoio")
+  som.play()
+}
