@@ -22,6 +22,7 @@
 
 body {
   background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
 }
 body * {
   font-family: "Inter", sans-serif;
@@ -44,8 +45,7 @@ body * {
   font-weight: 500;
 }
 #mnysticks-id ul li a {
-  text-align: center;
-  display: block;
+  border: 1px solid red;
 }
 #switch {
   position: relative;
@@ -93,11 +93,12 @@ body * {
   flex-direction: column;
   gap: 15px;
   display: flex;
-  border-left: 20px;
-  border-right: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 #mnysticks-id ul li a[href="#"] {
   margin: auto;
+  justify-content: center;
   display: flex;
   height: 40px;
   align-items: center;
@@ -142,4 +143,14 @@ footer {
   padding: 24px 0;
   text-align: center;
   font-size: 19px;
+}
+
+@media (min-width: 300px) {
+  :root {
+    --bg-url: url(vector-abstract-black-and-grey-wave-business-background-vector-image-.jpg);
+  }
+
+  .light {
+    --bg-url: url(fundo-ondulado-preto-e-branco_23-2150530925.jpg);
+  }
 }
